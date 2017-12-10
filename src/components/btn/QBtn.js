@@ -39,7 +39,9 @@ export default {
   },
   methods: {
     click (e) {
-      this.$el.blur()
+      if (this.$q.platform.is.mobile) {
+        this.$el.blur()
+      }
 
       clearTimeout(this.timer)
 
